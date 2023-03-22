@@ -7,8 +7,8 @@ def home():
 
 @app.route('/areaRettangolo', methods=['POST'])
 def area_rettangolo():
-    base = int(request.args.get("base"))
-    altezza = int(request.args.get("altezza"))
+    base = int(request.values.get("base"))
+    altezza = int(request.values.get("altezza"))
     totale = base * altezza
     return render_template("uno_2.html", totale= totale)
 
